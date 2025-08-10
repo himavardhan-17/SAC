@@ -96,7 +96,7 @@ const Contact = () => {
         {
           name: 'N. Sai Saketh',
           position: 'Support & Testing',
-          image: 'public/Team/Saketh.jpeg',
+          image: '/Team/Saketh.jpeg',
           phone: '+91 99123 60894',
           instagram: 'https://www.instagram.com/saketh__99__/',
           linkedin: 'https://www.linkedin.com/in/sai-saketh-nagella-13050a327/',
