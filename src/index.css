@@ -1,0 +1,206 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom color palette: 798D94, F7F6F8, 3C4879, EEEFEF */
+
+@layer base {
+  :root {
+    --background: 300 20% 97%; /* F7F6F8 */
+    --foreground: 218 37% 35%; /* 3C4879 */
+
+    --card: 300 20% 97%; /* F7F6F8 */
+    --card-foreground: 218 37% 35%; /* 3C4879 */
+
+    --popover: 300 20% 97%; /* F7F6F8 */
+    --popover-foreground: 218 37% 35%; /* 3C4879 */
+
+    --primary: 218 37% 35%; /* 3C4879 */
+    --primary-foreground: 300 20% 97%; /* F7F6F8 */
+
+    --secondary: 240 4% 93%; /* EEEFEF */
+    --secondary-foreground: 218 37% 35%; /* 3C4879 */
+
+    --muted: 240 4% 93%; /* EEEFEF */
+    --muted-foreground: 200 9% 55%; /* 798D94 */
+
+    --accent: 200 9% 55%; /* 798D94 */
+    --accent-foreground: 300 20% 97%; /* F7F6F8 */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 300 20% 97%; /* F7F6F8 */
+
+    --border: 240 4% 93%; /* EEEFEF */
+    --input: 240 4% 93%; /* EEEFEF */
+    --ring: 218 37% 35%; /* 3C4879 */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 300 20% 97%; /* F7F6F8 */
+    --sidebar-foreground: 218 37% 35%; /* 3C4879 */
+    --sidebar-primary: 218 37% 35%; /* 3C4879 */
+    --sidebar-primary-foreground: 300 20% 97%; /* F7F6F8 */
+    --sidebar-accent: 240 4% 93%; /* EEEFEF */
+    --sidebar-accent-foreground: 218 37% 35%; /* 3C4879 */
+    --sidebar-border: 240 4% 93%; /* EEEFEF */
+    --sidebar-ring: 218 37% 35%; /* 3C4879 */
+  }
+
+  .dark {
+    --background: 218 37% 35%; /* 3C4879 */
+    --foreground: 300 20% 97%; /* F7F6F8 */
+    --card: 218 37% 35%; /* 3C4879 */
+    --card-foreground: 300 20% 97%; /* F7F6F8 */
+    --popover: 218 37% 35%; /* 3C4879 */
+    --popover-foreground: 300 20% 97%; /* F7F6F8 */
+    --primary: 300 20% 97%; /* F7F6F8 */
+    --primary-foreground: 218 37% 35%; /* 3C4879 */
+    --secondary: 200 9% 55%; /* 798D94 */
+    --secondary-foreground: 300 20% 97%; /* F7F6F8 */
+    --muted: 200 9% 55%; /* 798D94 */
+    --muted-foreground: 240 4% 93%; /* EEEFEF */
+    --accent: 200 9% 55%; /* 798D94 */
+    --accent-foreground: 300 20% 97%; /* F7F6F8 */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 300 20% 97%; /* F7F6F8 */
+    --border: 200 9% 55%; /* 798D94 */
+    --input: 200 9% 55%; /* 798D94 */
+    --ring: 300 20% 97%; /* F7F6F8 */
+    --sidebar-background: 218 37% 35%; /* 3C4879 */
+    --sidebar-foreground: 300 20% 97%; /* F7F6F8 */
+    --sidebar-primary: 300 20% 97%; /* F7F6F8 */
+    --sidebar-primary-foreground: 218 37% 35%; /* 3C4879 */
+    --sidebar-accent: 200 9% 55%; /* 798D94 */
+    --sidebar-accent-foreground: 300 20% 97%; /* F7F6F8 */
+    --sidebar-border: 200 9% 55%; /* 798D94 */
+    --sidebar-ring: 300 20% 97%; /* F7F6F8 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom branded colors */
+.bg-brand-primary {
+  background-color: hsl(218 37% 35%); /* 3C4879 */
+}
+
+.bg-brand-secondary {
+  background-color: hsl(200 9% 55%); /* 798D94 */
+}
+
+.bg-brand-light {
+  background-color: hsl(300 20% 97%); /* F7F6F8 */
+}
+
+.bg-brand-neutral {
+  background-color: hsl(240 4% 93%); /* EEEFEF */
+}
+
+.text-brand-primary {
+  color: hsl(218 37% 35%); /* 3C4879 */
+}
+
+.text-brand-secondary {
+  color: hsl(200 9% 55%); /* 798D94 */
+}
+
+.text-brand-light {
+  color: hsl(300 20% 97%); /* F7F6F8 */
+}
+
+/* Smooth animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.4s ease-out forwards;
+}
+
+/* Hover effects */
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Custom shadows with brand colors */
+.shadow-brand {
+  box-shadow: 0 4px 16px rgba(60, 72, 121, 0.1);
+}
+
+.shadow-brand-lg {
+  box-shadow: 0 8px 32px rgba(60, 72, 121, 0.15);
+}
+
+.liquid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -20;
+  background: linear-gradient(270deg, #3D52A0, #7091E6, #8697C4, #ADBBDA);
+  background-size: 800% 800%;
+  animation: liquidGradient 25s ease infinite;
+  filter: blur(60px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+@keyframes liquidGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
