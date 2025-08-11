@@ -6,32 +6,7 @@ import { motion } from 'framer-motion';
 import { Users, Target, Heart, Lightbulb, Rocket } from 'lucide-react';
 
 const About = () => {
-  const leadership = [
-    {
-      name: "Arjun Reddy",
-      position: "SAC President",
-      description: "Steers the overall direction of student engagement and club synergy.",
-      icon: "👨‍💼"
-    },
-    {
-      name: "Priya Sharma",
-      position: "Vice President",
-      description: "Leads inter-club coordination and event execution.",
-      icon: "👩‍💼"
-    },
-    {
-      name: "Karthik Kumar",
-      position: "Technical Coordinator",
-      description: "Heads tech-driven clubs and innovation initiatives.",
-      icon: "👨‍💻"
-    },
-    {
-      name: "Sneha Patel",
-      position: "Cultural Secretary",
-      description: "Drives cultural programming and artistic celebrations.",
-      icon: "👩‍🎨"
-    }
-  ];
+  
 
   const timeline = [
     { year: "2020", event: "Founded SAC", description: "Official launch of the Student Affairs Cell." },
@@ -140,29 +115,7 @@ const About = () => {
         </section>
 
         {/* Leadership */}
-        <section className="py-16 bg-white/70 backdrop-blur-md">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Leadership</h2>
-            <p className="text-xl text-gray-600">These student leaders are the heart of everything SAC stands for.</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {leadership.map((person, i) => (
-              <motion.div
-                key={person.name}
-                className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition-all duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-4xl mb-4">{person.icon}</div>
-                <h3 className="font-bold text-lg text-gray-900 mb-1">{person.name}</h3>
-                <p className="text-blue-600 font-medium mb-3">{person.position}</p>
-                <p className="text-gray-600 text-sm">{person.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </section>
+      
 
         {/* Timeline */}
         <section className="py-16">
